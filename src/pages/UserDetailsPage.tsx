@@ -1,12 +1,11 @@
-import { useMemo, useState } from "react";
-import { ArrowLeft, BriefcaseBusiness, Check, Mail, MapPin, UserPlus } from "lucide-react";
+import { useMemo } from "react";
+import { ArrowLeft, BriefcaseBusiness, Mail, MapPin } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { profiles } from "../data/profiles";
 
 export default function UserDetailsPage() {
   const { userId } = useParams<{ userId: string }>();
   const navigate = useNavigate();
-  const [following, setFollowing] = useState(false);
   const profile = useMemo(() => profiles.find((item) => item.id === Number(userId)), [userId]);
 
   if (!profile) {
