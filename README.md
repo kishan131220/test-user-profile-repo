@@ -23,13 +23,6 @@ npm install
 npm run dev
 ```
 
-## Production build
-
-```bash
-npm run build
-npm run preview
-```
-
 ## Folder structure
 
 ```text
@@ -59,14 +52,3 @@ user-profile-cards/
 └── README.md
 ```
 
-## Architecture
-
-- `types/profile.ts`: shared `UserProfile` type.
-- `data/profiles.ts`: single source of truth for profile content.
-- `components/ProfileCard.tsx`: reusable card presentation and interaction state.
-- `components/ProfileGrid.tsx`: maps typed profile data into cards.
-- `components/Avatar.tsx`: reusable avatar + online status UI.
-- `components/FollowButton.tsx`: isolated typed follow button.
-- `App.tsx`: page composition only.
-
-The profile image URLs use Unsplash's source service for visual placeholders. For a fully offline build, replace them with files under `public/avatars/` and update `profiles.ts`.

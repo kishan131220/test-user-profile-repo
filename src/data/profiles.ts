@@ -73,7 +73,7 @@ export const profiles: UserProfile[] = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=85",
     online: true,
   },
-   {
+  {
     id: 9,
     name: "Emma Wilson",
     role: "UX Designer",

@@ -23,7 +23,11 @@ export default function FollowButton({
           : "bg-slate-950 text-white shadow-sm hover:-translate-y-0.5 hover:bg-white hover:shadow-lg hover:text-black",
       ].join(" ")}
     >
-      {following ? <Check size={16} strokeWidth={2.5} /> : <UserPlus size={16} />}
+      {following ? (
+        <Check size={16} strokeWidth={2.5} />
+      ) : (
+        <UserPlus size={16} />
+      )}
       <span>{following ? "Following" : "Follow"}</span>
     </button>
   );
